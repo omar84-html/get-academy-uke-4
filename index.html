@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lyspære</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="lyspære" onclick="lyse()"></div>
+
+    <p id="status">lyspære er av</p>
+
+    <script>
+      let lys = "grey";
+
+      function lyse() {
+        if (lys === "grey") {
+          lys = "yellow";
+        } else {
+          lys = "grey";
+        }
+
+        document.getElementById("lyspære").style.backgroundColor = lys;
+        tekst();
+      }
+
+      function tekst() {
+        if (lys === "yellow") {
+          document.getElementById("status").innerText = "lyspære er på";
+        } else {
+          document.getElementById("status").innerText = "lyspære er av";
+        }
+      }
+    </script>
+  </body>
+</html>

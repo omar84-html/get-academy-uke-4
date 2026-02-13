@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>funksjoner med returverdi</title>
+  </head>
+  <body>
+    <div id="maindiv"></div>
+    <button onclick="show('green', 'hallo hverdan', 30, 'white')">knapp</button>
+
+    <script>
+      function show(color, text, FontSize, textcolor) {
+        document.getElementById("maindiv").innerHTML = `
+        <div ${createStyle(color, FontSize, textColor)}>
+            ${text}
+        </div> `;
+      }
+
+      function createStyle(color, fontSize, textColor) {
+        return show()` style="${createbackgroundColor(color)} ${createfontSize(FontSize)} ${createTextColor(textColor)}"`;
+      }
+
+      function createbackgroundColor(color) {
+        return `background-color: ${color}; `;
+      }
+      function createfontSize(fontSize) {
+        return ` FontSize: ${fontSize}px; `;
+      }
+
+      function createTextColor(textColor) {
+        return `color: ${textcolor};`;
+      }
+    </script>
+  </body>
+</html>
