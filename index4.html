@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adjektivhistorie MVC</title>
+  </head>
+  <body>
+    <div id="mainDiv">
+      once, there was a _ _ that _ in the _ and great things happened. the end.
+    </div>
+
+    <button onclick="knapp('green')">green</button>
+    <button onclick="knapp('red')">red</button>
+    <button onclick="knapp('cat')">cat</button>
+    <button onclick="knapp('man')">man</button>
+    <button onclick="knapp('stared')">stared</button>
+    <button onclick="knapp('jumped')">jumped</button>
+    <button onclick="knapp('pool')">pool</button>
+    <button onclick="knapp('wall')">wall</button>
+
+    <script>
+      // model
+
+      let historie =
+        "once, there was a ___ ___ that ___ in the ___ and great things happened. the end.";
+
+      //  veiw
+      function vishistorie() {
+        document.getElementById("mainDiv").innerHTML = historie;
+      }
+
+      //controller - styrer endring av modellen
+      function knapp(valgtOrd) {
+        historie = historie.replace("___", valgtOrd);
+        vishistorie();
+      }
+    </script>
+  </body>
+</html>
